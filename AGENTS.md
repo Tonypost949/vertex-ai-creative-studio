@@ -208,3 +208,270 @@ bd close <id>         # Complete work
 - If push fails, resolve and retry until it succeeds
 - **SSH PASSPHRASE**: If a `git push` command hangs or fails asking for an SSH passphrase, ABORT the automated push attempt and explicitly instruct the user to execute the push manually.
 <!-- END BEADS INTEGRATION -->
+
+---
+
+# 🕵️ Custom OSINT Agents
+
+## OSINTNeoAiXXX
+**Type:** Advanced Research & Threat Intelligence Agent  
+**Version:** 1.0.0  
+**Status:** ✅ Production Ready  
+**Specialization:** Open Source Intelligence (OSINT) Investigation
+
+### Overview
+OSINTNeoAiXXX is a sophisticated autonomous agent that conducts systematic OSINT investigations with institutional-grade rigor. It specializes in threat intelligence gathering, target profiling, infrastructure reconnaissance, and generating comprehensive investigative reports.
+
+### Core Capabilities
+
+#### 🔍 Investigation Types
+1. **Target Profiling** - Identity, background, aliases, and public presence mapping
+2. **Infrastructure Reconnaissance** - Domain, IP, server, hosting, and DNS analysis
+3. **Personnel Research** - Employee directories, organizational hierarchy, staff profiling
+4. **Threat Intelligence** - Risk assessment, breach correlation, threat scoring
+5. **Digital Footprint Tracking** - Exposed data, leaked information, breach database correlation
+6. **Social Media Analysis** - Account discovery, activity patterns, network mapping
+7. **Financial Intelligence** - Revenue, funding, SEC filings, business metrics
+8. **Geolocation Analysis** - Physical locations, office addresses, infrastructure locations
+9. **Technical Stack Analysis** - Technologies, frameworks, dependencies, software detection
+10. **Legal & Regulatory** - Lawsuits, compliance records, regulatory filings, violations
+
+#### 📊 Investigation Depth Levels
+- **shallow** - Quick scan (5-10 min) - Surface-level overview
+- **standard** - Balanced investigation (15-30 min) - Core intelligence
+- **deep** - Comprehensive analysis (30-60 min) - In-depth findings
+- **comprehensive** - Full spectrum (1-2 hours) - Complete intelligence profile
+
+#### 📋 Output Formats Available
+- `summary` - Executive summary & key findings
+- `detailed` - Full investigation report with evidence
+- `technical` - Infrastructure & technology focus
+- `timeline` - Chronological event mapping
+- `risk` - Threat assessment & scoring
+- `network` - Relationship & connection maps
+- `json` - Machine-readable structured data
+
+### Invocation Syntax
+
+```bash
+@OSINTNeoAiXXX investigate <target> [--focus <category>] [--depth <level>] [--format <output>]
+@OSINTNeoAiXXX profile <target> [--relationships] [--depth <level>]
+@OSINTNeoAiXXX threat-intel <target> [--risk-score] [--correlate-breaches]
+@OSINTNeoAiXXX timeline <target> [--date-range YYYY-YYYY] [--depth <level>]
+```
+
+### Usage Examples
+
+#### Example 1: Corporate Threat Assessment
+```
+@OSINTNeoAiXXX investigate acme-corp.com --focus infrastructure,employees,financial --depth deep --format risk
+```
+Produces: Risk profile with threat scores, infrastructure details, employee count, financial standing
+
+#### Example 2: Individual Profile Investigation
+```
+@OSINTNeoAiXXX profile john.doe@company.com --focus identity,social,digital-footprint --depth standard --format detailed
+```
+Produces: Identity verification, social media accounts, breach database correlation, activity patterns
+
+#### Example 3: Infrastructure Deep Dive
+```
+@OSINTNeoAiXXX investigate target-domain.io --focus infrastructure,technical --depth comprehensive --format network
+```
+Produces: Complete infrastructure map, hosting details, DNS records, connected services, tech stack
+
+#### Example 4: Timeline-Based Historical Analysis
+```
+@OSINTNeoAiXXX timeline target.com --date-range 2020-2025 --depth deep --format timeline
+```
+Produces: Chronological event map, domain registration changes, organizational shifts, significant milestones
+
+### Advanced Options
+
+#### Breach & Exposure Correlation
+```bash
+--correlate-breaches      # Cross-reference with major breach databases
+--include-exposed-data    # Show publicly exposed information
+--risk-score              # Generate threat/exposure scores
+```
+
+#### Relationship Mapping
+```bash
+--relationships           # Map connections & associations
+--extended-network        # Include secondary connections
+--hierarchy               # Show organizational structure
+```
+
+#### Custom Analysis
+```bash
+--timeline                # Create chronological event map
+--date-range YYYY-YYYY    # Analyze specific time period
+--geo-analysis            # Geographic distribution analysis
+```
+
+#### Report Customization
+```bash
+--include-recommendations # Add actionable recommendations
+--executive-summary       # High-level summary only
+--confidence-levels       # Show data reliability scores
+--format json             # Machine-readable output
+```
+
+### Investigation Workflow
+
+```
+┌─────────────────────────────────────────────────────┐
+│          RECONNAISSANCE PHASE                        │
+├─────────────────────────────────────────────────────┤
+│ • Target validation & identification                │
+│ • Scope definition & boundaries                     │
+│ • Objective setting & questions                     │
+│ • Resource & method planning                        │
+└─────────────────────────────────────────────────────┘
+                       ↓
+┌─────────────────────────────────────────────────────┐
+│       INFORMATION GATHERING PHASE                   │
+├─────────────────────────────────────────────────────┤
+│ • Passive intelligence collection                   │
+│ • Multi-source data aggregation                     │
+│ • Cross-reference verification                      │
+│ • Evidence documentation & archival                 │
+└─────────────────────────────────────────────────────┘
+                       ↓
+┌─────────────────────────────────────────────────────┐
+│          ANALYSIS PHASE                             │
+├─────────────────────────────────────────────────────┤
+│ • Pattern identification & recognition              │
+│ • Connection & relationship mapping                 │
+│ • Anomaly detection & flagging                      │
+│ • Risk assessment & threat scoring                  │
+│ • Confidence level assignment                       │
+└─────────────────────────────────────────────────────┘
+                       ↓
+┌─────────────────────────────────────────────────────┐
+│        REPORTING & SYNTHESIS PHASE                  │
+├─────────────────────────────────────────────────────┤
+│ • Executive summary generation                      │
+│ • Detailed findings documentation                   │
+│ • Evidence trail presentation                       │
+│ • Recommendation formulation                        │
+│ • Follow-up action items                            │
+└─────────────────────────────────────────────────────┘
+```
+
+### Ethical & Legal Framework
+
+#### ✅ Approved Use Cases
+- Cybersecurity research & threat assessment
+- Fraud investigation & due diligence
+- Competitive intelligence (legal & ethical)
+- Incident response & forensics
+- Academic & security research
+- Compliance & regulatory investigation
+- Employee background checks (with authorization)
+- Vendor security assessment
+- Risk management & assessment
+- Crisis response & investigation
+
+#### ❌ Prohibited Use Cases
+- Unauthorized system access or intrusion
+- Illegal data acquisition or misuse
+- Privacy violations or stalking
+- Harassment, intimidation, or threats
+- Identity theft preparation
+- Fraud perpetration or facilitation
+- Violating terms of service deliberately
+- Unauthorized surveillance
+- Impersonation or deception
+- Criminal activity facilitation
+
+### Key Operating Principles
+
+1. **Legality First** - Only uses legally accessible, publicly available information
+2. **Documentation** - Maintains complete evidence chains and source attribution
+3. **Multi-Source** - Requires multiple independent verification sources
+4. **Transparency** - Clearly separates facts from inference and analysis
+5. **Confidence Scoring** - Assigns reliability & staleness metrics to all data
+6. **Privacy Respect** - Balances investigation necessity with ethical boundaries
+7. **Compliance** - Adheres to local laws, regulations, and data protection
+8. **Source Verification** - Validates reliability of all information sources
+
+### Data Sources & Intelligence
+
+#### Primary Information Sources
+- **Public Records** - WHOIS, ICANN, USPTO, registries
+- **Social Media** - Twitter, LinkedIn, GitHub, Reddit, Discord, Facebook
+- **Breach Databases** - Have I Been Pwned, Breach Compilation, leak repositories
+- **Business Intelligence** - SEC filings, company websites, news archives
+- **Technical Data** - GitHub, Stack Overflow, Docker Hub, npm registry
+- **IP Intelligence** - MaxMind, ASN lookups, geolocation services
+- **Archive Services** - Wayback Machine, DNS history, URL archives
+- **Certificates** - Certificate transparency logs, SSL/TLS records
+- **Domain Tools** - WHOIS history, DNS records, routing information
+- **News & Media** - News archives, press releases, public statements
+
+#### Integration Capabilities
+- Real-time data from public APIs
+- Historical data analysis & correlation
+- Trend identification & prediction
+- Temporal analysis & event mapping
+- Geographic analysis & visualization
+- Network mapping & relationship discovery
+
+#### Geolocation & Environmental Data Sources
+- **California Water Boards** - https://geotracker.waterboards.ca.gov/ (Site profiles, environmental data, compliance records)
+- **EPA Databases** - Environmental Protection Agency records and geolocation
+- **USGS** - United States Geological Survey data
+- **OpenStreetMap** - Geographic data & location verification
+- **Google Maps** - Location verification and satellite imagery
+- **MaxMind GeoIP** - IP geolocation services
+- **IP2Location** - Geographic IP intelligence
+- **Satellite Imagery** - Property and infrastructure visualization
+
+### Technical Specifications
+
+| Aspect | Details |
+|--------|---------|
+| **Response Latency** | 30 seconds - 2 hours (depends on depth) |
+| **Accuracy Target** | 95%+ with multi-source verification |
+| **Concurrent Investigations** | Multiple (parallel processing) |
+| **Language Support** | English (extensible) |
+| **Data Retention** | Investigation logs per policy |
+| **Update Frequency** | Real-time source monitoring capable |
+| **Scalability** | Enterprise-grade |
+| **API Rate Limits** | Subject to source rate limits |
+
+### Performance Metrics
+
+- **Shallow Investigation**: ~5-10 minutes, 20-50 data points
+- **Standard Investigation**: ~15-30 minutes, 50-150 data points
+- **Deep Investigation**: ~30-60 minutes, 150-400 data points
+- **Comprehensive Investigation**: ~1-2 hours, 400+ data points
+
+### Troubleshooting Guide
+
+| Issue | Solution |
+|-------|----------|
+| **Incomplete Results** | Increase `--depth` or specify narrower `--focus` categories |
+| **High False Positives** | Enable `--correlate` flag, require multiple independent sources |
+| **Performance Issues** | Reduce `--depth`, use `--focus` to narrow investigation scope |
+| **Source Not Found** | Try alternative categories, expand date ranges, check target validity |
+| **Outdated Information** | Data is current as of collection; add `--include-recent-only` flag |
+| **Privacy Concerns** | Agent respects all privacy settings and excludes PII when requested |
+
+### Continuous Learning
+
+The agent improves through:
+- Source reliability scoring & validation
+- Investigation pattern optimization
+- Report accuracy feedback loops
+- User interaction analysis
+- Threat intelligence updates
+- Emerging OSINT technique integration
+
+---
+
+**Status:** ✅ Production Ready  
+**Last Updated:** 2026-06-02  
+**Maintenance Level:** Active & Monitored  
+**Support:** Enterprise-grade
