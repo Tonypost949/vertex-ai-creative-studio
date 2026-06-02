@@ -53,7 +53,7 @@ class NavConfig(BaseModel):
 class Default:
     """Defaults class"""
 
-    VERSION: str = "1.9.0"  # Fallback if package metadata is missing
+    VERSION: str = "1.10.0"  # Fallback if package metadata is missing
     BUILD_COMMIT: str = ""
     BUILD_DATE: str = ""
 
@@ -213,7 +213,7 @@ class Default:
         "INTERIOR_DESIGN_VIDEO_MODEL", "veo-3.1-lite-generate-001"
     )
     INTERIOR_DESIGN_IMAGE_MODEL: str = os.environ.get(
-        "INTERIOR_DESIGN_IMAGE_MODEL", "gemini-3-pro-image-preview"
+        "INTERIOR_DESIGN_IMAGE_MODEL", "gemini-3-pro-image"
     )
     INTERIOR_DESIGN_VIDEO_DURATION: int = int(os.environ.get(
         "INTERIOR_DESIGN_VIDEO_DURATION", 6

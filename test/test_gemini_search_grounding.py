@@ -26,7 +26,7 @@ if not PROJECT_ID:
     print("Skipping test: GOOGLE_CLOUD_PROJECT not set.")
     pytest.skip("GOOGLE_CLOUD_PROJECT not set", allow_module_level=True)
 
-MODEL_ID = "gemini-3-pro-image-preview"
+MODEL_ID = "gemini-3-pro-image"
 
 if not PROJECT_ID:
     print("Skipping test: GOOGLE_CLOUD_PROJECT not set.")

@@ -27,7 +27,7 @@ def gemini_image_upload_ui(
             label="Upload Media",
             on_upload=on_upload,
             multiple=True,
-            accepted_file_types=["image/jpeg", "image/png", "image/webp", "application/pdf"],
+            accepted_file_types=model_config.supported_input_mime_types if model_config else ["image/jpeg", "image/png", "image/webp", "application/pdf"],
             style=me.Style(width="100%"),
             disabled=upload_disabled,
         )

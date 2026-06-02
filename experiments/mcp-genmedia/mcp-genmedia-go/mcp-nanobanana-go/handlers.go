@@ -50,7 +50,7 @@ func nanobananaGenerateContentHandler(client *genai.Client, ctx context.Context,
 	}
 
 	modelArg, _ := request.GetArguments()["model"].(string)
-	model := "gemini-3-pro-image-preview"
+	model := "gemini-3-pro-image"
 	if modelArg != "" {
 		if resolvedInfo, found := common.ResolveGeminiImageModel(modelArg, appConfig.AllowUnsafeModels); found {
 			model = resolvedInfo.CanonicalName
@@ -171,6 +171,18 @@ func inferMimeType(path string) string {
 		return "image/gif"
 	case ".webp":
 		return "image/webp"
+	case ".pdf":
+		return "application/pdf"
+	case ".mp4":
+		return "video/mp4"
+	case ".mov":
+		return "video/quicktime"
+	case ".webm":
+		return "video/webm"
+	case ".avi":
+		return "video/x-msvideo"
+	case ".mkv":
+		return "video/x-matroska"
 	default:
 		// Defaulting to a common image type if extension is unknown, as the API might handle it.
 		// A more robust solution might involve reading file headers.

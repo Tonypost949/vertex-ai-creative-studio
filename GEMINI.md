@@ -123,6 +123,10 @@ The project uses Starlight (Astro) for its primary documentation site, located i
 
 ### Modifying Starlight Documentation
 *   **Target Directory:** All Starlight markdown files reside in `docs-site/src/content/docs/`.
+*   **Mirrored Documentation Files (Crucial):** Certain key documentation files exist at both the root level and within the Starlight directory. When updating one, you MUST update its twin in tandem to prevent documentation drift:
+    *   `environment_variables.md` ↔ `docs-site/src/content/docs/core/installation/environment_variables.md`
+    *   `FAQ.md` ↔ `docs-site/src/content/docs/core/FAQ.md`
+    *   `developers_guide.md` ↔ `docs-site/src/content/docs/core/developers_guide.md`
 *   **Frontmatter Requirement:** Every markdown file within the Starlight content directory MUST have YAML frontmatter with a `title` attribute. Example:
     ```markdown
     ---

@@ -36,6 +36,22 @@ def image_thumbnail(image_uri: str, index: int, on_remove: Callable, icon_size: 
                 )
             ):
                 me.icon("article")
+        elif any(
+            image_uri.lower().endswith(ext)
+            for ext in [".mp4", ".mov", ".avi", ".mkv", ".webm"]
+        ):
+            with me.box(
+                style=me.Style(
+                    width="100%",
+                    height="100%",
+                    border=me.Border.all(me.BorderSide(style="dashed", color=me.theme_var("outline"))),
+                    border_radius=8,
+                    display="flex",
+                    align_items="center",
+                    justify_content="center",
+                )
+            ):
+                me.icon("movie")
         else:
             me.image(src=image_uri, style=me.Style(width="100%", height="100%", border_radius=8, object_fit="cover"))
 

@@ -147,15 +147,15 @@ type GeminiImageModelInfo struct {
 
 // SupportedGeminiImageModels is the single source of truth for all supported Gemini Image models.
 var SupportedGeminiImageModels = map[string]GeminiImageModelInfo{
-	"gemini-3.1-flash-image-preview": {
-		CanonicalName:         "gemini-3.1-flash-image-preview",
+	"gemini-3.1-flash-image": {
+		CanonicalName:         "gemini-3.1-flash-image",
 		Aliases:               []string{"Nano Banana 2"},
 		SupportedAspectRatios: []string{"1:1", "3:2", "2:3", "3:4", "4:1", "4:3", "4:5", "5:4", "8:1", "9:16", "16:9", "21:9"},
 		Description:           "Gemini 3.1 Flash Image, or Nano Banana 2.",
 	},
 
-	"gemini-3-pro-image-preview": {
-		CanonicalName:         "gemini-3-pro-image-preview",
+	"gemini-3-pro-image": {
+		CanonicalName:         "gemini-3-pro-image",
 		Aliases:               []string{"Nano Banana Pro", "Gemini 3 Pro Image"},
 		SupportedAspectRatios: []string{"1:1", "3:2", "2:3", "3:4", "4:3", "4:5", "5:4", "9:16", "16:9", "21:9"},
 		Description:           "Gemini 3 Pro Image, or Gemini 3 Pro (with Nano Banana), is designed to tackle the most challenging image generation by incorporating state-of-the-art reasoning capabilities. It's the best model for complex and multi-turn image generation and editing, having improved accuracy and enhanced image quality.",

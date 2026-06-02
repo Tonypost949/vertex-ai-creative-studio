@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-06-01 (v3.9.0)
+
+*   **Feat:** Promoted Gemini Image models to GA (`gemini-3.1-flash-image` and `gemini-3-pro-image`) in `mcp-gemini-go` and `mcp-nanobanana-go` defaults and model registry.
+*   **Feat:** Enhanced `inferMimeType` to support video (`.mp4`, `.mov`, `.webm`, `.avi`, `.mkv`) and document (`.pdf`) formats in `mcp-gemini-go` and `mcp-nanobanana-go`.
+*   **Chore:** Bumped minor versions for all MCP servers to `3.9.0` to synchronize the release.
+
 ## 2026-04-15 (v3.8.0)
 
 *   **Feat:** Added support for `gemini-3.1-flash-tts-preview` to the `gemini_audio_tts` tool in `mcp-gemini-go` and set it as the default model.

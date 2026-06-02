@@ -36,6 +36,9 @@ class GeminiImageModelConfig:
     supported_image_sizes: List[str] = field(
         default_factory=lambda: ["1K", "2K"],
     )
+    supported_input_mime_types: List[str] = field(
+        default_factory=lambda: ["image/jpeg", "image/png", "image/webp", "application/pdf"]
+    )
 
     # Future-proofing
     supports_negative_prompt: bool = False
@@ -58,9 +61,9 @@ GEMINI_IMAGE_MODELS: List[GeminiImageModelConfig] = [
         supports_search=False,
     ),
     GeminiImageModelConfig(
-        version_id="3.0-pro-preview",
-        model_name="gemini-3-pro-image-preview",
-        display_name="Gemini 3.0 Pro Preview",
+        version_id="3.0-pro",
+        model_name="gemini-3-pro-image",
+        display_name="Gemini 3 Pro",
         button_label="Pro",
         max_input_images=14,
         max_output_images=1,
@@ -69,15 +72,16 @@ GEMINI_IMAGE_MODELS: List[GeminiImageModelConfig] = [
         supports_search=True,
     ),
     GeminiImageModelConfig(
-        version_id="3.1-flash-preview",
-        model_name="gemini-3.1-flash-image-preview",
-        display_name="Gemini 3.1 Flash Preview",
+        version_id="3.1-flash",
+        model_name="gemini-3.1-flash-image",
+        display_name="Gemini 3.1 Flash",
         button_label="2",
         max_input_images=14,
         max_output_images=1,
         requires_base_url=True,
         supported_aspect_ratios=["1:1", "3:2", "2:3", "3:4", "4:3", "1:4", "4:1", "4:5", "5:4", "1:8", "8:1", "9:16", "16:9", "21:9"],
         supported_image_sizes=["512", "1K", "2K", "4K"],
+        supported_input_mime_types=["image/jpeg", "image/png", "image/webp", "application/pdf", "video/mp4", "video/quicktime", "video/x-matroska", "video/webm"],
         supports_search=True,
         supports_thinking=True,
     ),

@@ -41,7 +41,7 @@ var (
 
 const (
 	serviceName = "mcp-nanobanana-go"
-	version     = "3.8.0" // Synchronize release version
+	version     = "3.9.0" // Synchronize release version
 )
 
 func init() {
@@ -96,7 +96,7 @@ func main() {
 	tool := mcp.NewTool("nanobanana_image_generation",
 		mcp.WithDescription("Generates content (text and/or images) based on a multimodal prompt using Gemini Image generation models."),
 		mcp.WithString("prompt", mcp.Required(), mcp.Description("The text prompt for content generation.")),
-		mcp.WithString("model", mcp.DefaultString("gemini-3.1-flash-image-preview"), mcp.Description(common.BuildGeminiImageModelDescription())),
+		mcp.WithString("model", mcp.DefaultString("gemini-3.1-flash-image"), mcp.Description(common.BuildGeminiImageModelDescription())),
 		mcp.WithString("aspect_ratio", mcp.DefaultString("1:1"), mcp.Description("Aspect ratio of the generated images. Note: supported aspect ratios are model-dependent.")),
 		mcp.WithArray("images", mcp.Description("Optional. A list of local file paths or GCS URIs for input images."), mcp.Items(map[string]any{"type": "string"})),
 		mcp.WithString("output_directory", mcp.Description("Optional. Local directory to save generated image(s) to.")),

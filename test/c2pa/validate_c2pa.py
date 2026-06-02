@@ -28,7 +28,7 @@ from google.genai import types
 # Configuration
 PROJECT_ID = os.getenv("PROJECT_ID")
 LOCATION = os.getenv("LOCATION", "us-central1")
-MODEL_ID = "gemini-3-pro-image-preview" # Nano Banana Pro
+MODEL_ID = "gemini-3-pro-image" # Nano Banana Pro
 OUTPUT_DIR = "test/c2pa/output"
 
 def generate_image(prompt: str, output_path: str):

@@ -18,6 +18,7 @@ variable "service_name" {
 variable "model_id" {
   description = "The ID of the Gemini model to use."
   type        = string
+  # TODO: Update to GA model
   default     = "gemini-3.1-pro-preview"
 }
 

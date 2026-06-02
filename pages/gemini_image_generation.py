@@ -103,7 +103,7 @@ def get_all_image_presets():
 class PageState:
     """Gemini Image Generation Page State"""
 
-    selected_model: str = "gemini-3.1-flash-image-preview"
+    selected_model: str = "gemini-3.1-flash-image"
     uploaded_image_gcs_uris: list[str] = field(default_factory=list)  # pylint: disable=invalid-field-call
     uploaded_image_display_urls: list[str] = field(default_factory=list)  # pylint: disable=invalid-field-call
     prompt: str = ""
@@ -293,7 +293,7 @@ def gemini_image_gen_page_content():
                         label="Upload Media",
                         on_upload=on_upload,
                         multiple=True,
-                        accepted_file_types=["image/jpeg", "image/png", "image/webp", "application/pdf"],
+                        accepted_file_types=model_config.supported_input_mime_types if model_config else ["image/jpeg", "image/png", "image/webp", "application/pdf"],
                         style=me.Style(width="100%"),
                         disabled=upload_disabled,
                     )
